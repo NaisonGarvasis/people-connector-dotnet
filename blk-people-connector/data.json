@@ -1,0 +1,59 @@
+[
+  {
+    "primaryWorkEmail": "user@contoso.com",
+    "skillData": {
+      "skills": "TypeScript;Python"
+    },
+    "certificationData": [
+      {
+        "certificationNumber": "alpha",
+        "specialties": "alpha",
+        "issuer": "Contoso",
+        "certification": "Ada Lovelace"
+      },
+      {
+        "certificationNumber": "beta",
+        "specialties": "beta",
+        "issuer": "Contoso",
+        "certification": "Ada Lovelace"
+      }
+    ],
+    "educationData": [
+      {
+        "schoolCountry": "US",
+        "schoolStateProvince": "alpha",
+        "school": "Ada Lovelace",
+        "yearDegreeReceived": "alpha",
+        "gpa": "alpha",
+        "fieldofStudy": "alpha",
+        "degree": "Ada Lovelace"
+      },
+      {
+        "schoolCountry": "US",
+        "schoolStateProvince": "beta",
+        "school": "Ada Lovelace",
+        "yearDegreeReceived": "beta",
+        "gpa": "beta",
+        "fieldofStudy": "beta",
+        "degree": "Ada Lovelace"
+      }
+    ],
+    "biography": "Sample profile note",
+    "jobHistoryData": [
+      {
+        "location": "Contoso",
+        "position": "alpha",
+        "businessTitle": "alpha",
+        "jobTitle": "alpha",
+        "organization": "Contoso"
+      },
+      {
+        "location": "Contoso",
+        "position": "beta",
+        "businessTitle": "beta",
+        "jobTitle": "beta",
+        "organization": "Contoso"
+      }
+    ]
+  }
+]

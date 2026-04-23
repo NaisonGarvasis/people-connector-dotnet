@@ -1,0 +1,6 @@
+{
+  "lang": "dotnet",
+  "tsp": "schema.tsp",
+  "inputFormat": "json",
+  "cocogenVersion": "1.1.0"
+}

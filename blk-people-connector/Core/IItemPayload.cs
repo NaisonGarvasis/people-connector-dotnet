@@ -1,0 +1,19 @@
+using Microsoft.Graph.Beta.Models.ExternalConnectors;
+
+namespace BlkPeopleConnector.Core;
+
+/// <summary>
+/// Maps item instances into Graph ExternalItem payloads.
+/// </summary>
+public interface IItemPayload<TItem>
+{
+    /// <summary>
+    /// Resolve the external item ID for a schema model instance.
+    /// </summary>
+    string GetItemId(TItem item);
+
+    /// <summary>
+    /// Convert a schema model instance into a Graph ExternalItem payload.
+    /// </summary>
+    ExternalItem ToExternalItem(TItem item);
+}
