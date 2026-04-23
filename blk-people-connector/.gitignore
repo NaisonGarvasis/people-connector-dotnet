@@ -4,3 +4,4 @@ appsettings.Development.json
 *.user
 *.suo
 .vscode/
+node_modules
