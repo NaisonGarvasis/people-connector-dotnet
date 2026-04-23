@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace BlkPeopleConnector.Core;
+namespace BLKPeopleConnector.Core;
 
 /// <summary>
 /// Shared helpers for external item ID encoding.

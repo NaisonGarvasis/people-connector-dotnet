@@ -1,5 +1,5 @@
 // C# representation of the external item schema.
-namespace BlkPeopleConnector.BLKPeopleConnector;
+namespace BLKPeopleConnector.BLKPeopleConnector;
 
 /// <summary>
 /// Schema model generated from TypeSpec.

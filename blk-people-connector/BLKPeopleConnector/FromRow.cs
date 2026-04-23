@@ -1,9 +1,9 @@
 // Map source rows into the schema model.
 using System.Collections.Generic;
-using BlkPeopleConnector;
-using BlkPeopleConnector.Datasource;
+using BLKPeopleConnector;
+using BLKPeopleConnector.Datasource;
 
-namespace BlkPeopleConnector.BLKPeopleConnector;
+namespace BLKPeopleConnector.BLKPeopleConnector;
 
 /// <summary>
 /// Maps source rows into the schema model using generated transforms.

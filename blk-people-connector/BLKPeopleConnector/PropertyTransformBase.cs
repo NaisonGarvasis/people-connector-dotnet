@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
-using BlkPeopleConnector.Core;
-using BlkPeopleConnector.Datasource;
+using BLKPeopleConnector.Core;
+using BLKPeopleConnector.Datasource;
 
-namespace BlkPeopleConnector.BLKPeopleConnector;
+namespace BLKPeopleConnector.BLKPeopleConnector;
 
 /// <summary>
 /// Base class for row-to-model property transforms.
@@ -54,15 +54,21 @@ public abstract class PropertyTransformBase
     /// </summary>
     protected virtual List<string> TransformSkills(object row)
     {
-        return RowParser.ParseStringCollection(row, "$.skillData.skills")
-            .Select(value => JsonSerializer.Serialize(
-                  new Microsoft.Graph.Beta.Models.SkillProficiency
-                  {
-                      DisplayName = value
-                  },
-                      new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter(System.Text.Json.JsonNamingPolicy.CamelCase) } }
-                  ))
-              .ToList();
+        return new Func<List<string>>(() =>
+            {
+                var results = new List<string>();
+                foreach (var entry in RowParser.ReadArrayEntries(row, "$.skillData[*]"))
+                {
+                    results.Add(JsonSerializer.Serialize(
+                        new Microsoft.Graph.Beta.Models.SkillProficiency
+                        {
+                            DisplayName = RowParser.ParseString(entry, "skills")
+                        },
+                        new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter(System.Text.Json.JsonNamingPolicy.CamelCase) } }
+                    ));
+                }
+                return results;
+            }).Invoke();
     }
 
     /// <summary>

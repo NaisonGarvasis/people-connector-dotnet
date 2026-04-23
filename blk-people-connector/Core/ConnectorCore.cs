@@ -12,10 +12,10 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Threading;
 
-using BlkPeopleConnector.Datasource;
-using BlkPeopleConnector.BLKPeopleConnector;
+using BLKPeopleConnector.Datasource;
+using BLKPeopleConnector.BLKPeopleConnector;
 
-namespace BlkPeopleConnector.Core;
+namespace BLKPeopleConnector.Core;
 
 /// <summary>
 /// Reusable connector core for provisioning, ingestion, and deletion.

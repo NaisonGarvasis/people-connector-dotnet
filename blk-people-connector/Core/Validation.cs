@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 
-namespace BlkPeopleConnector.Core;
+namespace BLKPeopleConnector.Core;
 
 /// <summary>
 /// Shared validation helpers for generated transforms.

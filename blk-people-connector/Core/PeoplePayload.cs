@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
-namespace BlkPeopleConnector.Core;
+namespace BLKPeopleConnector.Core;
 
 public sealed record PeopleLabelSerializationOptions(
     int? CollectionLimit

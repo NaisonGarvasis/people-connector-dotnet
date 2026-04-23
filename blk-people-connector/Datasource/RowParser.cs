@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using Date = System.DateOnly;
 using Json.Path;
 
-namespace BlkPeopleConnector.Datasource;
+namespace BLKPeopleConnector.Datasource;
 
 /// <summary>
 /// Helpers for parsing typed values from row dictionaries.

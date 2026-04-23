@@ -1,5 +1,5 @@
 // Schema and connection constants derived from TypeSpec.
-namespace BlkPeopleConnector.BLKPeopleConnector;
+namespace BLKPeopleConnector.BLKPeopleConnector;
 
 /// <summary>
 /// Constants used by the generated connector.

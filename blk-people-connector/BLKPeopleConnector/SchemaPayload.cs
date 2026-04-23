@@ -1,7 +1,7 @@
 // Graph schema payload derived from the TypeSpec model.
 using Microsoft.Graph.Beta.Models.ExternalConnectors;
 
-namespace BlkPeopleConnector.BLKPeopleConnector;
+namespace BLKPeopleConnector.BLKPeopleConnector;
 
 /// <summary>
 /// Builds the Graph schema payload for this connector.

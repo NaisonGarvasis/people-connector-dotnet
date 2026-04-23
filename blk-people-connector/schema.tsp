@@ -24,7 +24,7 @@ model BLKPersonProfile {
 
   // Skills
   @coco.label("personSkills")
-  @coco.source("skillData.skills", "displayName")
+  @coco.source("skillData[*].skills", "displayName")
   skills: string[];
   
   /// Certifications

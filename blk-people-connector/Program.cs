@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.Graph.Beta;
 using System.CommandLine;
 
-using BlkPeopleConnector.Core;
-using BlkPeopleConnector.Datasource;
-using BlkPeopleConnector.BLKPeopleConnector;
-using ItemModel = BlkPeopleConnector.BLKPeopleConnector.BLKPersonProfile;
+using BLKPeopleConnector.Core;
+using BLKPeopleConnector.Datasource;
+using BLKPeopleConnector.BLKPeopleConnector;
+using ItemModel = BLKPeopleConnector.BLKPeopleConnector.BLKPersonProfile;
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())

@@ -1,6 +1,6 @@
 using Microsoft.Graph.Beta.Models.ExternalConnectors;
 
-namespace BlkPeopleConnector.Core;
+namespace BLKPeopleConnector.Core;
 
 /// <summary>
 /// Maps item instances into Graph ExternalItem payloads.

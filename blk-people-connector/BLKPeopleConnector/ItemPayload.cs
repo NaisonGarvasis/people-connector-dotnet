@@ -1,8 +1,8 @@
 // Build ExternalItem payloads for Graph ingestion.
 using Microsoft.Graph.Beta.Models.ExternalConnectors;
-using BlkPeopleConnector.Core;
+using BLKPeopleConnector.Core;
 
-namespace BlkPeopleConnector.BLKPeopleConnector;
+namespace BLKPeopleConnector.BLKPeopleConnector;
 
 /// <summary>
 /// Maps schema model instances into Graph ExternalItem payloads.
