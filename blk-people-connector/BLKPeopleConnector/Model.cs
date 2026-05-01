@@ -8,6 +8,8 @@ public sealed class BLKPersonProfile
 {
     public string Account { get; set; } = default!;
 
+    public string CurrentPosition { get; set; } = default!;
+
     public List<string> Skills { get; set; } = default!;
 
     public List<string> Certifications { get; set; } = default!;

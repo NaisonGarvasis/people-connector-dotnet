@@ -24,6 +24,7 @@ public abstract class PropertyTransformBase
         object? value = name switch
         {
             "account" => TransformAccount(row),
+            "currentPosition" => TransformCurrentPosition(row),
             "skills" => TransformSkills(row),
             "certifications" => TransformCertifications(row),
             "educationalActivities" => TransformEducationalActivities(row),
@@ -44,6 +45,23 @@ public abstract class PropertyTransformBase
             new Microsoft.Graph.Beta.Models.UserAccountInformation
             {
                 UserPrincipalName = RowParser.ParseString(row, "$.primaryWorkEmail")
+            },
+            new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter(System.Text.Json.JsonNamingPolicy.CamelCase) } }
+            );
+    }
+
+    /// <summary>
+    /// Transform the currentPosition property from a source row.
+    /// </summary>
+    protected virtual string TransformCurrentPosition(object row)
+    {
+        return JsonSerializer.Serialize(
+            new Microsoft.Graph.Beta.Models.WorkPosition
+            {
+                Detail = new Microsoft.Graph.Beta.Models.PositionDetail
+                {
+                    JobTitle = RowParser.ParseString(row, "$.managementLevel")
+                }
             },
             new JsonSerializerOptions { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull, Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter(System.Text.Json.JsonNamingPolicy.CamelCase) } }
             );

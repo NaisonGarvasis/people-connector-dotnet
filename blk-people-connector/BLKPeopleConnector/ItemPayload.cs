@@ -35,6 +35,7 @@ public static class ItemPayload
             AdditionalData = new Dictionary<string, object?>
             {
                 { "account", PeoplePayload.SerializeStringLabel(item.Account, "account", new PeopleLabelSerializationOptions(null)) },
+                { "currentPosition", PeoplePayload.SerializeStringLabel(item.CurrentPosition, "currentPosition", new PeopleLabelSerializationOptions(null)) },
                 { "skills@odata.type", "#Collection(String)" },
                 { "skills", PeoplePayload.SerializeCollectionLabel(item.Skills, "skills", new PeopleLabelSerializationOptions(null)) },
                 { "certifications@odata.type", "#Collection(String)" },

@@ -22,6 +22,11 @@ model BLKPersonProfile {
   @coco.source("primaryWorkEmail","userPrincipalName")
   account: string;
 
+    // Job Title
+  @coco.label("personCurrentPosition")
+  @coco.source("managementLevel", "detail.jobTitle")
+  currentPosition: string;
+
   // Skills
   @coco.label("personSkills")
   @coco.source("skillData[*].skills", "displayName")

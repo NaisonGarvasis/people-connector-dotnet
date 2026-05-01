@@ -29,6 +29,15 @@ public static class SchemaPayload
                 },
                 new Property
                 {
+                    Name = "currentPosition",
+                    Type = PropertyType.String,
+                    AdditionalData = new Dictionary<string, object>
+                    {
+                        ["labels"] = new List<string> { "personCurrentPosition" },
+                    },
+                },
+                new Property
+                {
                     Name = "skills",
                     Type = PropertyType.StringCollection,
                     AdditionalData = new Dictionary<string, object>

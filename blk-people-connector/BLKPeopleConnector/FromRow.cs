@@ -19,6 +19,7 @@ public static class FromRow
         return new BLKPersonProfile
         {
                 Account = transforms.TransformProperty<string>("account", row),
+            CurrentPosition = transforms.TransformProperty<string>("currentPosition", row),
             Skills = transforms.TransformProperty<List<string>>("skills", row),
             Certifications = transforms.TransformProperty<List<string>>("certifications", row),
             EducationalActivities = transforms.TransformProperty<List<string>>("educationalActivities", row),
